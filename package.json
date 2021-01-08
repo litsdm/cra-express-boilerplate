@@ -1,0 +1,68 @@
+{
+  "name": "restaurant-web",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.8.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "helmet": "^4.3.1",
+    "mongoose": "^5.11.11",
+    "morgan": "^1.10.0",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "regenerator-runtime": "^0.13.7",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn dev-server\" \"yarn dev-client\" --kill-others",
+    "dev-client": "react-scripts start",
+    "dev-server": "cross-env NODE_ENV=development nodemon -w server --exec \"babel-node server\"",
+    "build": "node ./buildScript",
+    "build-server": "babel server -s -D -d dist",
+    "build-client": "react-scripts build",
+    "start": "node dist"
+  },
+  "proxy": "http://localhost:8080",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}
